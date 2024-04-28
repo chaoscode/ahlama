@@ -92,13 +92,15 @@ namespace ahlama
 
             TagsOutput tags = _ollamaService.ParseTags(result.Output);
             ModelListBox.Items.Clear();
-            foreach (var model in tags.models)
+            if (tags.models != null)
             {
-                var modelName = model.name.Split(":")[0];
-                ModelListBox.Items.Add(modelName);
-            }
-
-            ModelListBox.SelectedIndex = 0;
+                foreach (var model in tags.models)
+                {
+                    var modelName = model.name.Split(":")[0];
+                    ModelListBox.Items.Add(modelName);
+                }
+                ModelListBox.SelectedIndex = 0;
+            }            
         }
 
         private void Form1_Activated(object sender, EventArgs e)
