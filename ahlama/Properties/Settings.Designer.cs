@@ -25,7 +25,7 @@ namespace ahlama.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://35.214.194.83:11434/")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:11434/")]
         public string URL {
             get {
                 return ((string)(this["URL"]));
